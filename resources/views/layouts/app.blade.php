@@ -13,10 +13,8 @@
 </head>
 
 <body class="bg-dark text-light">
-
-    <!-- Navbar -->
+    @auth
     <nav class="navbar-expand-lg navbar-dark bg-dark navContent">
-        @auth
             <div>
                 <a class="navbar-brand" href="{{ route('task.index') }}">Tarefas</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"

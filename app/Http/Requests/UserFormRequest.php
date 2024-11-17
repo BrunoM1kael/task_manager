@@ -23,7 +23,7 @@ class UserFormRequest extends FormRequest
     {
         return [
             'name' => 'required|min:3|max:45',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:users,email',
             'password' => 'required|min:3'
         ];
     }
@@ -37,6 +37,7 @@ class UserFormRequest extends FormRequest
             'email.email' => 'Por favor, insira um email válido.',
             'password.required' => 'O campo senha é obrigatório.',
             'password.min' => 'O campo senha deve ter no mínimo 3 caracteres.',
+            'email.unique' => 'O e-mail usado já está cadastrado, por favor tente outro.'
         ];
     }
 }
